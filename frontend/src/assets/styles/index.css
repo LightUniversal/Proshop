@@ -1,0 +1,175 @@
+* {
+  font-family: "Poppins";
+  /* color: rgb(128, 0, 128); */
+}
+
+.time div {
+  display: inline-block;
+  margin: 10px;
+}
+.time {
+  /* height: 30px; */
+}
+.question__ label {
+  vertical-align: bottom !important;
+}
+.startBtn {
+  background-color: rgba(12, 109, 56, 0.8);
+}
+#score {
+  background-color: rgba(241, 248, 240, 0.1);
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+.subject {
+  border: none;
+  width: 150px;
+  display: inline-block;
+  /* margin-left: 10px; */
+  /* text-align: center; */
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+#question {
+  position: relative;
+}
+#question li {
+  margin: 10px 10px;
+  list-style-type: none;
+  list-style: none;
+  display: flex;
+  align-items : center ;
+  justify-content: center;
+}
+.question_ {
+  padding: 15px 21px;
+  position: relative;
+  display: grid;
+  background-color: rgba(244, 244, 244, 0.2);
+  border-radius: 3px;
+  text-align:left;
+  font-weight: 600;
+}
+
+.next, .submit {
+  border: none;
+  font-size: 14px;
+  border-radius: 3px !important;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  
+}
+#question input {
+  cursor: pointer;
+}
+#question li label {
+  display: inline-block;
+  margin: 5px 10px;
+  background-color: rgba(244, 244, 244, 0.8);
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding: 15px 10px;
+}
+.score_ {
+  /* height: 60px; */
+  text-align: center;
+  border-radius: 3px;
+}
+
+main {
+    min-height: 80vh;
+  }
+  
+  .rating span {
+    margin: 0.1rem;
+  }
+  
+  .rating svg {
+    color: #f8e825;
+  }
+  
+  .rating-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-left: 0.5rem;
+  }
+  
+  .product-title {
+    height: 2.5em; /* Set a fixed height */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  table td,
+  table th {
+    text-align: center;
+  }
+  
+  .review {
+    margin-top: 30px;
+  }
+  
+  .review h2 {
+    font-size: 24px;
+    background: #f4f4f4;
+    padding: 10px;
+    
+    border: none;
+  }
+  
+  .review button {
+    margin-top: 10px;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    /* height: 90px; */
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+/* utility classess */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navbar-toggler {
+  background-color: rgba(83, 82, 82, 0.1);
+  border-radius:3px ;
+  position: relative;
+  z-index: 10;
+  top: 2px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    /* box-shadow: none; */
+    color: black !important;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    border-top: thin solid rgba(205,205,205,0.3);
+    margin-top: 15px;
+    padding: 20px 20px;
+    background-color: rgba(104, 101, 101, 0.2);
+
+    position: relative;
+    z-index: 2000;
+    border-radius: 10px;
+  }
+  .body {
+    border-top: none !important;
+  }
+  
+}

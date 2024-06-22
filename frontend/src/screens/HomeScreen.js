@@ -1,0 +1,61 @@
+// import { useState, useEffect } from "react";
+import Message from "../components/Message";
+import { useGetProductsQuery } from "../slices/productsApiSlice";
+import { Row, Col, Card } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import Product from "../components/Product";
+// import axios from "axios";
+import React from "react";
+import Loader from "../components/Loader";
+import Paginate from "../components/Paginate";
+import { FaArrowAltCircleLeft, FaInfoCircle, FaQuestionCircle } from "react-icons/fa";
+import ProductCarousel from "../components/ProductCarousel";
+
+const HomeScreen = () => {
+  const { pageNumber, keyword } = useParams();
+
+  const { data, isLoading, error } = useGetProductsQuery({keyword, pageNumber});
+  // const [products, setProducts] = useState([]);
+
+  // useEffect(()=> {
+  //   // fetch data
+  //   const fetchProducts = async ()=> {
+  //     const { data } = await axios.get('/api/products');
+  //     setProducts(data);
+  //   }
+
+  //   fetchProducts()
+  // }, [])
+  return (
+    <>
+    {
+      !keyword ? (<ProductCarousel />) :(<Link to="/" className="btn btn-light mb-3">
+        <FaArrowAltCircleLeft /> Go Back
+      </Link>)
+    }
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Message varient="danger">{error?.data.message || error.error}</Message>
+      ) : (
+        <>
+          
+          <Row>
+            {data.products.map((product) => (
+              <Col key={product._id} lg={4} xl={3} sm={12} md={6}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Paginate 
+            pages={data.pages}
+            page={data.page}
+            keyword={keyword ? keyword : ""}
+          />
+        </>
+      )}
+    </>
+  );
+};
+
+export default HomeScreen;
