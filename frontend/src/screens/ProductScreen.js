@@ -188,7 +188,7 @@ const ProductScreen = () => {
                   )}
                   <ListGroup.Item>
                     <Button
-                      className=" border-0 py-2 bg-primary rounded-1"
+                      className=" border-0 py-2 bg-black small rounded-1"
                       type="button"
                       disabled={product.countInStock === 0}
                       onClick={addToCartHandler}
